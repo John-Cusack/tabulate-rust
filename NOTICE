@@ -1,0 +1,13 @@
+tabulate-rust incorporates no upstream source code: it is an independent
+Rust implementation of the table-formatting behavior described by the
+upstream project below. The pure-Python fallback
+(`tabulate/_pure.py`) is a byte-identical copy of the upstream 0.10.0
+module, used when the Rust extension is unavailable or the input is
+outside the kernel's exact domain (and as the correctness oracle for
+the equivalence suite):
+
+  astanin/python-tabulate — https://github.com/astanin/python-tabulate
+  Copyright (c) 2011-2020 Sergey Astanin and contributors; MIT
+  (see LICENSE, which is the upstream MIT text).
+
+`tests/upstream/` are the upstream 0.10.0 test files, unmodified.

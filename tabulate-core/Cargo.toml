@@ -1,0 +1,12 @@
+[package]
+name = "tabulate-core"
+version = "0.1.0"
+edition = "2021"
+description = "Rust port of the astanin/python-tabulate formatting kernel (no Python dependency)"
+license = "MIT"
+repository = "https://github.com/John-Cusack/tabulate-rust"
+homepage = "https://github.com/astanin/python-tabulate"
+
+[lib]
+name = "tabulate_core"
+path = "src/lib.rs"

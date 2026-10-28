@@ -1,0 +1,11 @@
+/target/
+tabulate/_core*.so
+tabulate/*.so
+__pycache__/
+*.pyc
+.venv/
+dist/
+*.egg-info/
+.pytest_cache/
+.DS_Store
+target/

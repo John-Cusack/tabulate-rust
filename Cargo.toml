@@ -1,0 +1,20 @@
+[workspace]
+members = ["tabulate-core"]
+resolver = "2"
+
+[package]
+name = "tabulate-rust"
+version = "0.1.0"
+edition = "2021"
+description = "Rust port of the astanin/python-tabulate formatting kernel, with Python bindings"
+license = "MIT"
+repository = "https://github.com/John-Cusack/tabulate-rust"
+homepage = "https://github.com/astanin/python-tabulate"
+
+[lib]
+name = "_core"
+crate-type = ["cdylib"]
+
+[dependencies]
+tabulate-core = { version = "0.1.0", path = "tabulate-core" }
+pyo3 = { version = "0.24", features = ["extension-module"] }
