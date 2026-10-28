@@ -1,0 +1,28 @@
+# Release configuration for the `tabulate` converted project (scaffolded by
+# `release-prep --init`, reviewed: smoke vectors, authors, floor 3.10).
+
+[release]
+schema = 1
+project = "tabulate"
+rust_crate = "tabulate-core"
+pypi_dist = "tabulate-rust"
+python_import = "tabulate"
+version = "0.1.0"
+requires_python = ">=3.10"
+python_versions = ["3.10", "3.11", "3.12", "3.13"]
+platforms = ["ubuntu-22.04", "macos-14", "windows-2022"]
+github_repo = "John-Cusack/tabulate-rust"
+release_workflow = ".github/workflows/release.yml"
+pypi_environment = "pypi"
+testpypi_environment = "testpypi"
+license_spdx = "MIT"
+upstream = "astanin/python-tabulate"
+upstream_url = "https://github.com/astanin/python-tabulate"
+upstream_license = "MIT"
+upstream_authors = "Sergey Astanin and contributors"
+smoke_exprs = [
+  "tabulate.tabulate([['spam', 41.9999]], ['s', 'n'], tablefmt='grid').startswith('+')",
+  "hasattr(tabulate.tabulate([['a']], tablefmt='html'), '_repr_html_')",
+  "tabulate.tabulate([['a']], tablefmt='simple', maxcolwidths=[10]).replace('-', '').strip() == 'a'",
+  "tabulate.tabulate(None, ['a', 'b']).startswith('a')",
+]
